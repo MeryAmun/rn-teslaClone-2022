@@ -3,16 +3,22 @@ import React from 'react';
 import styles from './styles';
 import StyleButton from '../styleButton/StyleButton';
 
-const CarItem = () => {
+const CarItem = (props) => {
+  const {name, tagLine,tagLineCTA, image} = props
   return (
     <View style={styles.carContainer}>
 
-        <ImageBackground source={require('../../assets/assets/images/ModelX.jpeg')}
+        <ImageBackground source={image}
         style={styles.image}/>
       <View style={styles.titles}>
-        <Text style={styles.title}> Model 5</Text>
-        <Text style={styles.subtitles}>Starting at $69,420</Text>
+        <Text style={styles.title}> {name}</Text>
+        <Text style={styles.subtitles}>{tagLine}
+        {" "}
+        <Text style={styles.subtitleCTA}>{tagLineCTA}</Text>
+        </Text>
+        
       </View>
+      <View style={styles.buttonContainer}>
       <StyleButton type='primary' 
       content={"Custom Order"} 
       onPress={() => {
@@ -24,6 +30,7 @@ const CarItem = () => {
       onPress={() => {
         console.warn("Existing Inventory was pressed")
       }}/>
+      </View>
       </View>
   )
 }
