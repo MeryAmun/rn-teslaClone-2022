@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, } from 'react-native';
-import CarItem from './components/cartItem';
+import CarItem from './components/cartItem/CartItem';
 
 export default function App() {
   return (
