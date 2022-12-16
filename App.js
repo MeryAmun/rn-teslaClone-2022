@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View, } from 'react-native';
-import CarItem from './components/cartItem/CartItem';
+import CarsList from './components/carsList/CarsList';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <CarItem/>
+    <CarsList/>
     </View>
   );
 }
